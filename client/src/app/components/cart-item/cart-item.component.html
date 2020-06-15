@@ -1,0 +1,16 @@
+<div>
+
+    <button ngClass="deleteBtn" (click)="deleteCartItem()" [class]="displayX">&#x274C;</button>
+
+    <img width="20%" src="{{imgUrl}}">
+
+    <section ngClass="cart-product-box" *ngIf="cartItem">
+        <p ngClass="title">{{ cartItem.product.name }}</p>
+        <p>Quantity: {{ cartItem.amount }}</p>
+        <p *ngIf="!cartItem.product.sale">Price: ₪{{ cartItem.product.price *  cartItem.amount }}</p>
+        <p ngClass="real-price" *ngIf="cartItem.product.sale">Real Price:
+            ₪{{cartItem.product.price  *  cartItem.amount }}</p>
+        <p ngClass="sale-price" *ngIf="cartItem.product.sale">Sale: ₪{{cartItem.product.sale  *  cartItem.amount }}</p>
+    </section>
+
+</div>

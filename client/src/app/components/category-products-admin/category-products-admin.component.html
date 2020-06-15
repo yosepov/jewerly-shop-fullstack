@@ -1,0 +1,32 @@
+<div>
+    <button class="btn btn-warning" (click)="delete()">Delete "{{product.name}}"</button><br><br>
+    <img src='http://localhost:8080/assets/products/{{product.img_name}}' /><br />
+    <div ngClass="labels-box">
+
+
+
+        <label ngClass="labels">Name: </label>
+        <input ngClass="inputs" type="text" [value]="name" placeholder="name" [(ngModel)]="product.name"><br />
+        <label ngClass="labels">Carat: </label>
+        <input ngClass="inputs" type="number" placeholder="carat" [value]="price" [(ngModel)]="product.carat"><br />
+        <label ngClass="labels">Gold Karat: </label>
+        <select ngClass="inputs" [(ngModel)]="product.goldKarat">
+            <option disabled selected>Select a Karat...</option>
+            <option>24k</option>
+            <option>18k</option>
+            <option>14k</option>
+        </select><br />
+        <label ngClass="labels">Gold Type: </label>
+        <select ngClass="inputs" [(ngModel)]="product.goldType">
+            <option disabled selected>Select Type...</option>
+            <option>White</option>
+            <option>Yellow</option>
+            <option>Red</option>
+        </select><br />
+        <label ngClass="labels">Price In Shekels: </label>
+        <input ngClass="inputs" type="number" [value]="price" placeholder="price" [(ngModel)]="product.price"><br />
+        <label ngClass="labels">Sale Price: </label>
+        <input ngClass="inputs" type="number" placeholder="type Zero(0) to cancel" [(ngModel)]="product.sale"><br />
+    </div>
+    <button class="btn btn-success updateButtun" (click)="update()">Update "{{product.name}}"</button>
+</div>

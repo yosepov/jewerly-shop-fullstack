@@ -1,0 +1,27 @@
+* {
+    text-align: center;
+}
+#selectedProducts, #order {
+    width: 45%;
+    display: inline-block;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    padding: 10px;
+    overflow: auto;
+    height: 88vh;
+    box-sizing: border-box;
+    position: relative;
+} 
+#order i {
+    display: block;
+    text-align: left;
+    width: 100%;
+    border-bottom: 2px solid rgb(143, 135, 250);
+    margin-top: 15px;
+}
+
+#selectedProducts button {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}

@@ -1,0 +1,73 @@
+
+.updateButtun{
+margin-bottom: 5px;
+}
+
+div {
+    position: relative;
+    display:block;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+div img {
+    width: 170px;
+    height: 150px;
+}
+
+div i {
+    display: inline-block;
+}
+
+.labels-box{
+    position: relative;
+}
+
+.labels{
+
+margin-top: 10px;
+height: 30px;
+font-weight: bold;
+font-size: medium;
+
+}
+
+.inputs{
+width: 200px;
+height: 30px;
+border: none;
+background: none;
+text-align: center;
+color: rgb(77, 52, 0);
+font-weight: bold;
+font-size: medium;
+border-bottom: 1px solid rgba(86, 173, 255, 0.822) ;
+margin-top: 10px;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .labels{
+        position: absolute;
+        display: block;
+        width: 100%;
+        right: 150px;
+        margin-top: 10px;
+        height: 30px;
+        font-weight: bold;
+        font-size: medium;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .labels{
+display: none;
+
+
+    }
+}
+

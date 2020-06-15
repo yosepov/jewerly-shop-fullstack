@@ -1,0 +1,23 @@
+
+
+.add-product-box{
+width: 100%;
+text-align: center;
+align-items: center;
+border-bottom: 2px solid rgb(0, 0, 85);
+
+}
+
+.file-input{
+    width: 100%;
+    color: red;
+    text-align: center;
+}
+
+
+.add-product-box > input, select {
+    border:none;
+    color: darkblue;
+    border-bottom: 2px solid darkblue;
+
+}

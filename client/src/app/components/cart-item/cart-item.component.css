@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+
+img{
+    position: relative;
+    display: block;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+
+}
+.deleteBtn{
+    position: relative;
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    border: 2px solid white;
+
+}
+
+.deleteBtn:hover{
+    border: 2px solid black;
+    color: red;
+    cursor: pointer;
+}
+.cart-product-box{
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.title{
+    color: rgb(0, 119, 255);
+    font-family: 'Girassol', cursive;
+
+}
+
+.real-price {
+    color: rgba(128, 128, 128, 0.664);
+}
+
+.sale-price {
+    color: rgb(7, 211, 51);
+}
+
+
+@media only screen and (min-width: 930px) {
+
+    img{
+        position: relative;
+        display: block;
+        text-align: center;
+        align-items: center;
+        width: 200px;
+        left: 25%;
+    
+    }
+    }

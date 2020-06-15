@@ -1,0 +1,43 @@
+<div>
+    <div ngClass="add-product-box">
+
+        <button class="btn btn-danger" (click)="backToShop()">
+            <i class="glyphicon glyphicon-arrow-left"></i> Back to shop
+        </button>
+        <h3><i><u>Add A Product</u></i></h3>
+
+        <label>Image: </label>
+        <input ngClass="file-input" type="file" accept="image/*" name="myImage" (change)="setImage($event)">
+
+
+
+        <label>Name: </label>
+        <input type="text" [(ngModel)]="newProduct.name"><br />
+
+        <label>Category: </label>
+        <select [(ngModel)]="newProduct.category">
+            <option disabled selected>Select a category...</option>
+            <option *ngFor="let c of categories" [value]="c._id">{{c.category}}</option>
+        </select><br />
+        <label>Carat: </label>
+        <input type="number" [(ngModel)]="newProduct.carat"><br />
+        <label>Gold Karat: </label>
+        <select [(ngModel)]="newProduct.goldKarat">
+            <option disabled selected>Select a Karat...</option>
+            <option>24k</option>
+            <option>18k</option>
+            <option>14k</option>
+        </select><br />
+        <label>Gold Color: </label>
+        <select [(ngModel)]="newProduct.goldType">
+            <option disabled selected>Select a Karat...</option>
+            <option>Wihte</option>
+            <option>Yellow</option>
+            <option>Red</option>
+        </select><br />
+        <label>Price in Shekels: </label>
+        <input type="number" [(ngModel)]="newProduct.price"><br /><br />
+
+        <button class="btn btn-primary" [disabled]="!addButton()" (click)="addProduct()">ADD</button><br /><br />
+    </div>
+</div>

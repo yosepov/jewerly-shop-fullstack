@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"OnlineSuperDB.admin"}],"uuid":"ea34fb41b70b4a4f8c06631b1e71dccb"}

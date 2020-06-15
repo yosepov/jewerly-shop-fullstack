@@ -1,0 +1,51 @@
+<div>
+
+    <app-login-modal [header]="username" [alertStyle]="alertStyle" [message]="message" [startShopping]="startShopping"
+        [continueShopping]="continueShopping" [submit]="submit"></app-login-modal>
+
+    <div class="login-box" #loginForm>
+        <h1>Login Now To Shop!</h1>
+        <input type="email" class="glyphicon" (change)="getEmail($event)" placeholder="&#xe008; email"><br />
+
+        <input type="password" class="glyphicon" (change)="getPassword($event)"
+            placeholder="&#xe033; password"><br /><br />
+
+        <button ngClass="btn btn-success" (click)="login()" data-toggle="modal" data-target="#demoModal">Login</button>
+        <br><br>
+        <a routerLink="/register">Don't have an acount?</a>
+    </div>
+
+    <div ngClass="aboutForm">
+        <section class="section1">
+
+        </section>
+        <section class="section2">
+            <p>women</p>
+        </section>
+        <section class="section3">
+            <p>Men </p>
+        </section>
+    </div>
+
+
+    <div *ngIf="allProducts && allOrders">
+        <p ngClass="info">Number of products available in that website: {{ allProducts.length }}</p>
+        <br>
+        <p ngClass="info">Number of all orders made in that website: {{ allOrders.length }}</p>
+    </div>
+
+    <div>
+        <h2 ngClass="des-header">Israel Diamonds
+        </h2>
+        <h3> Fine Diamonds & Custom Jewelry</h3>
+        <p ngClass="des">
+            Dreaming of the perfect piece of high quality jewelry, custom
+            designed to your specifications and priced within your budget?
+            Choose the perfect loose diamond or gemstone from
+            our high quality range of spectacular loose gemstones so we
+            can create your ring based on your own custom jewelry design.</p>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,12 @@
+.modal {
+    position: relative;
+}
+.modal .close {
+    font-size: 45px;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+}
+.modal .modal-body {
+    overflow: auto;
+}

@@ -1,0 +1,34 @@
+<div *ngIf="products && connectedUser" ngClass="products">
+    <aside [class]="displayCart">
+        <app-my-cart [user]="connectedUser"></app-my-cart>
+    </aside>
+    <main [class]="mainClass">
+        <div>
+            <button class="nav-category-btn" (click)="getRings()">Rings</button>
+            <button class="nav-category-btn" (click)="getEarings()">Earings</button>
+            <button class="nav-category-btn" (click)="getBracelets()">Bracelets</button>
+            <button class="nav-category-btn" (click)="getNecklaces()">Necklaces</button>
+            <button class="nav-category-btn" (click)="getMenProducts()">Man</button>
+        </div><br />
+        <input ngClass="searchInput" type="search" (change)="getAllProducts()" [(ngModel)]="search"
+            placeholder="Search & press Enter">
+        <br>
+
+        <button *ngIf="isAdmin" class="add-product" (click)="addPage()">Add Product</button>
+        <button *ngIf="isAdmin" class="logout" (click)="logout()">Logout</button>
+
+        <div *ngIf="!isAdmin">
+
+            <app-category-products *ngFor="let p of products" [product]="p" [user]="connectedUser">
+            </app-category-products>
+        </div>
+
+        <div *ngIf="isAdmin">
+            <app-category-products-admin *ngFor="let p of products" [product]="p" [user]="connectedUser"
+                [category]="category">
+            </app-category-products-admin>
+        </div>
+    </main>
+</div>
+
+<app-not-connected *ngIf="!connectedUser"></app-not-connected>

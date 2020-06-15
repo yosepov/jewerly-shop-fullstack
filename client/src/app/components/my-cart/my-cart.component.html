@@ -1,0 +1,15 @@
+<div>
+    <span ngClass="welcome">Hello {{user.private_name}} </span>
+    <button ngClass="logoutBtn" (click)="logout()">Logout</button><br />
+    <u ngClass="myCartTitle">My Cart</u>
+    <section ngClass="cartBox" *ngIf="cartItems">
+
+        <app-cart-item *ngFor="let c of cartItems" [cartItem]="c"></app-cart-item>
+
+    </section>
+
+    <button ngClass="delete-all" (click)="deleteAllCartItems()"><i class="glyphicon glyphicon-trash"></i>Delete
+        All</button><br /><br />
+    <span ngClass="total-price">Total Price: ₪{{overallPrice}}</span>
+    <button ngClass="order" (click)="orderAction()" [disabled]="this.redux.getState().orderBtn">Order</button>
+</div>

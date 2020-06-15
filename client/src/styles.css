@@ -1,0 +1,38 @@
+html, body {
+    background-color: white;
+}
+.products {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 89vh;
+    grid-template-columns: repeat(12, 1fr);
+}
+aside {
+    height: 100%;
+    border-right: 1px solid rgb(61, 122, 253);
+    grid-column: span 3;
+    background-color: rgb(255, 255, 255);
+}
+
+
+main {
+    grid-column: span 9;
+    overflow: auto;
+    text-align: center;
+}
+.deafultMain {
+    grid-column: span 9;
+    overflow: auto;
+    text-align: center;
+}
+.adminMain {
+    grid-column: span 12;
+    overflow: auto;
+    text-align: center;
+}
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}

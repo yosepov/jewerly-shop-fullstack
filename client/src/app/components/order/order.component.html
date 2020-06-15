@@ -1,0 +1,51 @@
+<app-login-modal *ngIf="order && header && message" alertStyle={{alertStyle}} submit={{submit}} message={{message}}
+    header={{header}}></app-login-modal>
+
+<section>
+    <div id="selectedProducts">
+        <button class="btn btn-warning" (click)="backToShop()">
+            <i class="glyphicon glyphicon-arrow-left"></i> Back to shop
+        </button>
+        <h3 *ngIf="user">{{user.private_name}} Cart</h3>
+        <i *ngIf="order">Total Price: ₪{{ order.final_price }}</i>
+        <app-cart-item *ngFor="let c of items" [cartItem]="c" displayX="none"></app-cart-item>
+    </div>
+
+    <div id="order" *ngIf="order">
+        <h3>Order</h3>
+        <i>Shipping Details</i>
+
+        <div class="form-group">
+            <label>City: </label>
+            <input type="text" class="form-control" [value]="user.city" [(ngModel)]="order.delivery_city" required />
+        </div>
+
+        <div class="form-group">
+            <label>Street: </label>
+            <input type="text" class="form-control" [value]="user.street" [(ngModel)]="order.delivery_street"
+                required />
+        </div>
+
+        <div class="form-group">
+            <label>House Number: </label>
+            <input type="number" class="form-control" [value]="user.house_number" [(ngModel)]="order.delivery_house"
+                required />
+        </div>
+
+        <div class="form-group">
+            <label>Shipping Date: </label>
+            <input type="date" class="form-control" [min]="date()" [(ngModel)]="order.delivery_date" required />
+            <label style="color: red;">*By Default The Date Will Be Today's date </label>
+
+        </div>
+
+        <div>
+            <i>Payments</i>
+            <label>Credit Card: </label>
+            <input type="number" class="form-control" [(ngModel)]="order.cc_number" required />
+        </div><br />
+
+        <button class="btn btn-success" (click)="orderAction()" data-toggle="modal"
+            data-target="#demoModal">Order</button>
+    </div>
+</section>

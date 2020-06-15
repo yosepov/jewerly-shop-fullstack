@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
+
+
+div {
+    margin: 10px;
+    text-align: center;
+}
+div div {
+    text-align: center;
+    width: 31%;
+    display: inline-block;
+    border-bottom: 1px solid rgb(49, 129, 161);
+    padding: 10px;
+    overflow: auto;
+    height: 500px;
+    box-sizing: border-box;
+}
+div div:hover {
+    border-bottom: 2px solid rgb(49, 129, 161);
+
+}
+
+div label {
+    display: block;
+}
+.aboutForm img {
+    width: 100%;
+}
+
+
+
+
+
+input{ 
+    border: none;
+    border-bottom: 1px solid lightskyblue;
+    text-align: center;
+    background-color: none;
+    color: rgb(49, 129, 161);
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+section{
+    height: 140px;
+    width: 100%;
+    margin-top: 10px;
+}
+.section1{
+    background-image: url("../../../../../server/assets/login/diamonds.jpg");
+    background-size: cover ;
+}
+
+.section2{
+    position: relative;
+    background-image: url("../../../../../server/assets/login/doaminds2.jpg");
+    background-size: cover ;
+}
+
+.section3{
+    position: relative;
+    background-image: url("../../../../../server/assets/login/diamonds3.jpg");
+    background-size: cover ;
+}
+
+.section3 > p {
+    color: rgb(49, 129, 161);
+    font-size: 48px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    text-shadow: 1px 3px 5px lightskyblue;
+}
+
+.section2 > p {
+    color: rgb(49, 129, 161);
+    font-size: 48px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    text-shadow: 1px 3px 5px lightskyblue;
+
+}
+
+.section1:hover , .section2:hover , .section3:hover {
+box-shadow: rgba(49, 129, 161) 1px 1px 10px  ;
+}
+
+.des-header{
+    color: blue;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 3px;
+
+}
+
+.des{
+    color: black;
+    font-family: 'Merriweather', serif;
+}
+.info{
+    color: rgb(64, 64, 255);
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}

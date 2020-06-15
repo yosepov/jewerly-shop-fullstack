@@ -1,0 +1,52 @@
+.nav-category-btn{
+    border: none;
+    font-weight: bold;
+    font-size: medium;
+    background: none;
+    letter-spacing: 3px;
+    border-bottom: 2px solid rgb(0, 140, 255);
+    border-top: 2px solid rgb(0, 110, 255);
+
+
+}
+
+.nav-category-btn:hover{
+border-bottom: 2px solid rgb(0, 110, 255);
+border-top: 2px solid rgb(0, 60, 255);
+text-shadow: 1px 1px 1px gray;
+}
+
+.searchInput{
+    border: none;
+    border-bottom: 1px solid rgb(146, 135, 250);
+    text-align: center;
+    color: rgb(0, 1, 71);
+    margin-bottom: 10px;
+}
+
+.add-product{
+    background: none;
+    border: none;
+    color: rgb(1, 1, 65);
+    font-weight: bold;
+    border-bottom: 1px solid rgb(0, 0, 99);
+}
+
+.add-product:hover{
+    background-color: rgb(0, 0, 99);
+    color: white;
+}
+
+
+.logout{
+    background: none;
+    border: none;
+    color: rgb(65, 1, 1);
+    font-weight: bold;
+    border-bottom: 1px solid rgb(99, 0, 0);
+}
+
+.logout:hover{
+    background-color: rgb(204, 19, 19);
+    color: white;
+}
